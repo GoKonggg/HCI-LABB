@@ -1,0 +1,115 @@
+:root { /* nc standfor noiseCore*/
+    --nc-red: #ff4040;
+    --nc-black: #000000;
+    --nc-white: #ffffff;
+    --max-width: 1200px;
+  }
+
+body {
+    background: var(--nc-black);
+    color: var(--nc-white);
+    font-family: 'Inknut Antiqua', serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #222;
+    background: var(--nc-black);
+  }
+  .nav-left {
+    display: flex;
+    gap:2rem;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .navbar a {
+    color: var(--nc-white);
+    text-decoration: none;
+    font-family: 'Inknut Antiqua', sans-serif;
+  }
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  .logo {
+    font-family: 'Inknut Antiqua', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .search-input {
+    padding: 0.3rem 0.7rem;
+    border: 1px solid #555;
+    background: var(--nc-black);
+    color: var(--nc-white);
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  .search-input:focus {
+    width: 200px;
+    outline: none;
+  }
+  
+  /* WISHLIST SECTION */
+  .wishlist-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  .wishlist-section h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--nc-white);
+    margin-bottom: 2.5rem;
+  }
+  .wishlist-items {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .wishlist-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .wishlist-card img {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+  }
+  .wishlist-info h2 {
+    color: var(--nc-white);
+    margin-bottom: 0.3rem;
+  }
+  .wishlist-info p {
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .wishlist-btn {
+    background: var(--nc-red);
+    color: var(--nc-white);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-family: 'Inknut Antiqua', sans-serif;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: 0.3s;
+  }
+  .wishlist-btn:hover {
+    background: #cc3030;
+  }
+  

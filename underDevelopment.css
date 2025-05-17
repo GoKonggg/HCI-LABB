@@ -1,0 +1,38 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Atur tampilan body agar center */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Kontainer pesan */
+.container {
+  text-align: center;
+  padding: 2rem 3rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Judul */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Deskripsi */
+.container p {
+  font-size: 1rem;
+  color: #666;
+}

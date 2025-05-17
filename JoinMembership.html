@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Membership | Noisecore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles4.css" />
+</head>
+<body>
+ <!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <!-- checkbox “on/off” -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <!-- tiga garis -->
+  <label for="nav-toggle" class="nav-burger">
+    <span></span><span></span><span></span>
+  </label>
+
+  <!-- KIRI: menu link, dibungkus .nav-menu -->
+  <nav class="nav-menu nav-left">
+    <a href="index2.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="about-us.html">ABOUT US</a>
+  </nav>
+
+  <!-- TENGAH: logo -->
+  <div class="logo">
+    <a href="index2.html">NOISECORE</a>
+  </div>
+
+  <!-- KANAN: search + icon -->
+  <div class="nav-right">
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <input
+        type="text"
+        id="searchQuery"
+        class="search-input"
+        placeholder="Search..."
+      />
+      <button type="submit" style="display: none"></button>
+    </form>
+    <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
+    <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+    <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+  </div>
+</header>
+
+  <!-- HERO -->
+  <header class="member-hero">
+    <h1>Become an Insider</h1>
+    <p>Unlock exclusive perks, early drops and personalized sound features.</p>
+    <a href="#register" class="hero-btn">Join Now</a>
+  </header>
+
+  <!-- BENEFITS -->
+  <section class="benefit-section">
+    <h2>Why Join?</h2>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <img src="./ASSET/benefit-early.png" alt="Early Access" />
+        <h3>Early Access</h3>
+        <p>Be first in line for limited releases and firmware updates.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="./ASSET/benefit-sound.png" alt="Personalized Sound" />
+        <h3>Personalized Sound</h3>
+        <p>AI presets that adapt to your ears before anyone else gets them.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="./ASSET/benefit-reward.png" alt="Rewards" />
+        <h3>Member Rewards</h3>
+        <p>Discounts, limited‑edition merch and private listening events.</p>
+      </div>
+    </div>
+  </section>
+
+        <!-- REGISTRATION FORM -->
+  <section id="register" class="register-section">
+    <h2>Join Membership</h2>
+    <form id="memberForm" class="register-form" novalidate>
+      <!-- EMAIL -->
+      <div class="form-row single">
+        <input type="email" id="email" placeholder="Email Address*" />
+        <span id="msg-email" class="form-msg">Invalid email</span>
+      </div>
+
+      <!-- NAME SPLIT -->
+      <div class="form-row">
+        <input type="text" id="firstName" placeholder="First Name*" />
+        <span id="msg-fname" class="form-msg">Required</span>
+        <input type="text" id="surname" placeholder="Surname*" />
+        <span id="msg-lname" class="form-msg">Required</span>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="form-row single">
+        <input type="password" id="password" placeholder="Password*" />
+        <span id="msg-pass" class="form-msg">Minimum 8 chars • upper, lower & number</span>
+      </div>
+
+       <!-- DATE OF BIRTH -->
+       <div class="form-row single">
+        <input type="date" id="dob" />
+        <span id="msg-dob" class="form-msg">Enter valid DOB (≥10 yrs)</span>
+      </div>
+
+      <!-- GENDER -->
+      <div class="form-row gender-row">
+        <span id="gender-anchor" style="display:none;"></span>
+        <label class="gender-label">Gender</label>
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <span id="msg-gender" class="form-msg">Select gender</span>
+      </div>
+
+     
+
+      <!-- EMAIL MARKETING -->
+      <div class="form-row single opt-row">
+        <label><input type="checkbox" id="marketing" /> Sign up for product & offer updates</label>
+      </div>
+
+      <!-- TERMS -->
+      <div class="form-row single terms-row">
+        <label><input type="checkbox" id="terms" /> I agree to the Privacy Policy & Terms of Use*</label>
+        <span id="msg-terms" class="form-msg">Required</span>
+      </div>
+
+      <button type="submit" class="submit-btn">Join Membership</button>
+    </form>
+  </section>
+
+  
+    
+  <footer class="nc-footer">
+    <div class="footer-container">
+  
+      <!-- ===== LINK GRID ===== -->
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Earbuds</a></li>
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About&nbsp;Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Member</h4>
+          <ul>
+            <li><a href="#">Join Program</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Refer a Friend</a></li>
+            <li><a href="#">VIP Events</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- ===== SOCIAL ===== -->
+      <div class="footer-social">
+        <a href="#"><img src="./ASSET/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="./ASSET/whatsapp.png"  alt="WhatsApp"  /></a>
+      </div>
+  
+      <hr />
+  
+      <!-- ===== BOTTOM BAR ===== -->
+      <div class="footer-bottom">
+        <span>© 2025 Noisecore Corporation</span>
+        <nav class="bottom-links">
+          <a href="#">Sitemap</a>
+          <a href="#">Legal</a>
+          <a href="#">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+    
+      <script src="membership.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop | Noisecore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet"/>
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+   crossorigin="anonymous"
+ />
+  <link rel="stylesheet" href="styles3.css"/>
+</head>
+<body>
+ <!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <!-- checkbox “on/off” -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <!-- tiga garis -->
+  <label for="nav-toggle" class="nav-burger">
+    <span></span><span></span><span></span>
+  </label>
+
+  <!-- KIRI: menu link, dibungkus .nav-menu -->
+  <nav class="nav-menu nav-left">
+    <a href="index2.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="about-us.html">ABOUT US</a>
+  </nav>
+
+  <!-- TENGAH: logo -->
+  <div class="logo">
+    <a href="index2.html">NOISECORE</a>
+  </div>
+
+  <!-- KANAN: search + icon -->
+  <div class="nav-right">
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <input
+        type="text"
+        id="searchQuery"
+        class="search-input"
+        placeholder="Search..."
+      />
+      <button type="submit" style="display: none"></button>
+    </form>
+    <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
+    <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+    <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+  </div>
+</header>
+
+  <!-- HERO -->
+  <header class="shop-hero">
+    <h1>Discover Your Sound</h1>
+    <p>Browse all products or filter by category to find your perfect gear.</p>
+  </header>
+
+  <!-- FILTER BAR -->
+  <section class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Products</button>
+    <button class="filter-btn" data-filter="headphone">Headphones</button>
+    <button class="filter-btn" data-filter="speaker">Speakers</button>
+    <button class="filter-btn" data-filter="earbuds">Earbuds</button>
+    <button class="filter-btn" data-filter="open-earbuds">Open‑Earbuds</button>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <section class="product-section">
+    <div class="product-grid">
+      <!-- Headphones -->
+      <div class="product-card" data-category="headphone">
+        <img src="./ASSET/product1.png" alt="Head‑X Pro" />
+        <h3>Head‑X Pro</h3>
+        <span class="price">IDR 3,499,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="headphone">
+        <img src="./ASSET/product1.png" alt="Head‑X Lite" />
+        <h3>Head‑X Lite</h3>
+        <span class="price">IDR 1,999,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Speakers -->
+      <div class="product-card" data-category="speaker">
+        <img src="./ASSET/product1.png" alt="BoomBox Max" />
+        <h3>BoomBox Max</h3>
+        <span class="price">IDR 2,899,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="speaker">
+        <img src="./ASSET/product1.png" alt="Pocket Beat" />
+        <h3>Pocket Beat</h3>
+        <span class="price">IDR 799,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Earbuds -->
+      <div class="product-card" data-category="earbuds">
+        <img src="./ASSET/product1.png" alt="AirPulse ANC" />
+        <h3>AirPulse ANC</h3>
+        <span class="price">IDR 1,299,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="earbuds">
+        <img src="./ASSET/product1.png" alt="AirPulse Lite" />
+        <h3>AirPulse Lite</h3>
+        <span class="price">IDR 899,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Open‑Earbuds -->
+      <div class="product-card" data-category="open-earbuds">
+        <img src="./ASSET/product1.png" alt="OpenWave" />
+        <h3>OpenWave</h3>
+        <span class="price">IDR 1,799,000</span>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card" data-category="open-earbuds">
+        <img src="./ASSET/product1.png" alt="OpenWave Sport" />
+        <h3>OpenWave Sport</h3>
+        <span class="price">IDR 1,999,000</span>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  
+  <footer class="nc-footer">
+    <div class="footer-container">
+  
+      <!-- ===== LINK GRID ===== -->
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#">Headphones</a></li>
+            <li><a href="#">Earbuds</a></li>
+            <li><a href="#">Speakers</a></li>
+            <li><a href="#">Accessories</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About&nbsp;Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Warranty</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h4>Member</h4>
+          <ul>
+            <li><a href="#">Join Program</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Refer a Friend</a></li>
+            <li><a href="#">VIP Events</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- ===== SOCIAL ===== -->
+      <div class="footer-social">
+        <a href="#"><img src="./ASSET/instagram.png" alt="Instagram" /></a>
+        <a href="#"><img src="./ASSET/whatsapp.png"  alt="WhatsApp"  /></a>
+      </div>
+  
+      <hr />
+  
+      <!-- ===== BOTTOM BAR ===== -->
+      <div class="footer-bottom">
+        <span>© 2025 Noisecore Corporation</span>
+        <nav class="bottom-links">
+          <a href="#">Sitemap</a>
+          <a href="#">Legal</a>
+          <a href="#">Privacy Policy</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Wishlist | Noisecore</title>
+  <link rel="stylesheet" href="wishlist.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="index2.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about-us.html">ABOUT US</a>
+    </div>
+    <div class="logo">
+      <a href = "index2.html">NOISECORE</a>
+    </div>
+    <div class="nav-right">
+      <form class="search-form" onsubmit="handleSearch(event)">
+        <input type="text" id="searchQuery" class="search-input" placeholder="Search..." />
+        <button type="submit" style="display:none;"></button>
+      </form>
+      <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
+      <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </div>
+
+  <!-- WISHLIST SECTION -->
+  <section class="wishlist-section">
+    <h1>Your Wishlist</h1>
+    <div class="wishlist-items">
+      <div class="wishlist-card">
+        <img src="./ASSET/product1.png" alt="OpenWave" />
+        <div class="wishlist-info">
+          <h2>OpenWave</h2>
+          <p>Rp 1.800.000</p>
+          <button class="wishlist-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="wishlist-card">
+        <img src="./ASSET/product1.png" alt="Head-X Pro" />
+        <div class="wishlist-info">
+          <h2>Head‑X Pro</h2>
+          <p>Rp 2.500.000</p>
+          <button class="wishlist-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src = "wishlist.js">
+    
+  </script>
+</body>
+</html>

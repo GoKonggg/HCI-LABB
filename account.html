@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account Dashboard | Noisecore</title>
+  <link rel="stylesheet" href="account.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left">
+      <a href="index2.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="about-us.html">ABOUT US</a>
+    </div>
+    <div class="logo">
+      <a href = "index2.html">NOISECORE</a>
+    </div>
+    <div class="nav-right">
+      <form class="search-form" onsubmit="handleSearch(event)">
+        <input type="text" id="searchQuery" class="search-input" placeholder="Search..." />
+        <button type="submit" style="display:none;"></button>
+      </form>
+      <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
+      <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+      <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </div>
+
+  <!-- ACCOUNT DASHBOARD -->
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="profile">
+        <i class="fa-regular fa-user-circle fa-3x"></i>
+        <h2>Welcome, GUEST</h2>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="#" onclick="switchTab('orders')"><i class="fa-solid fa-box"></i> Order History</a>
+        <a href="#" onclick="switchTab('wishlist')"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        <a href="#" onclick="switchTab('profile')"><i class="fa-solid fa-gear"></i> Edit Profile</a>
+        <a href="#" class="logout" onclick="logoutAccount()">
+          <i class="fa-solid fa-right-from-bracket"></i> Log Out
+        </a>
+      </nav>
+      
+      
+    </aside>
+
+    <main class="main-panel">
+        <div id="overview" class="tab-content active">
+          <h1>Account Overview</h1>
+          <p>This is your personal dashboard. Use the menu to navigate your account features.</p>
+        </div>
+      
+        <div id="orders" class="tab-content">
+          <h1>Order History</h1>
+          <p>You have no past orders yet.</p>
+        </div>
+      
+        <div id="wishlist" class="tab-content">
+          <h1>Your Wishlist</h1>
+          <p>Items you saved will appear here.</p>
+        </div>
+      
+        <div id="profile" class="tab-content">
+          <h1>Edit Profile</h1>
+          <p>You can update your account details soon.</p>
+        </div>
+      </main>
+      
+
+  <script  src = "account.js" ></script>
+</body>
+</html>

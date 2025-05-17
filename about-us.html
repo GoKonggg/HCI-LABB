@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+ <!-- ===== NAVBAR ===== -->
+<header class="navbar">
+  <!-- checkbox “on/off” -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+  <!-- tiga garis -->
+  <label for="nav-toggle" class="nav-burger">
+    <span></span><span></span><span></span>
+  </label>
+
+  <!-- KIRI: menu link, dibungkus .nav-menu -->
+  <nav class="nav-menu nav-left">
+    <a href="index2.html">HOME</a>
+    <a href="shop.html">SHOP</a>
+    <a href="about-us.html">ABOUT US</a>
+  </nav>
+
+  <!-- TENGAH: logo -->
+  <div class="logo">
+    <a href="index2.html">NOISECORE</a>
+  </div>
+
+  <!-- KANAN: search + icon -->
+  <div class="nav-right">
+    <form class="search-form" onsubmit="handleSearch(event)">
+      <input
+        type="text"
+        id="searchQuery"
+        class="search-input"
+        placeholder="Search..."
+      />
+      <button type="submit" style="display: none"></button>
+    </form>
+    <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
+    <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
+    <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+  </div>
+</header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h2>We are</h2>
+        <h1>Noisecore</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      </div>
+      <div class="hero-illu">
+        <img src="./ASSET/head.png" alt="illustration" />
+      </div>
+    </section>
+
+    <section id="history" class="history">
+      <div class="history-illu"><img src="./ASSET/building.png" alt="buildings" /></div>
+      <h2>Noisecore History</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+         but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+    </section>
+
+    <section id="belief" class="belief">
+      <h2>What We Believe In</h2>
+      <div class="belief-grid">
+        <div class="belief-card">
+          <img src="./ASSET/value-learn.png" alt="lorem" />
+          <h3>Lorem ipsum</h3>
+          <p>Audio tech evolves fast — we stay curious, experiment daily, and adapt quickly.</p>
+        </div>
+        <div class="belief-card">
+          <img src="./ASSET/value-share.png" alt="lorem" />
+          <h3>Lorem ipsum</h3>
+          <p>Knowledge multiplies when shared. Weekly demos and open documentation keep everyone growing together.</p>
+        </div>
+        <div class="belief-card">
+          <img src="./ASSET/value-hardwork.png" alt="lorem" />
+          <h3>Lorem ipsum</h3>
+          <p>Great sound takes relentless iteration. We embrace the grind to perfect every note.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR MISSION -->
+<section id="mission" class="mission-section">
+    <div class="mission-inner">
+      <h2>Our Mission</h2>
+  
+      <p class="mission-intro">
+        We design immersive audio experiences that let every listener
+        <em>feel</em> the music, anytime and anywhere.
+      </p>
+  
+      <div class="mission-grid">
+        <div class="mission-card">
+          <h3>Innovation First</h3>
+          <p>
+            We blend cutting‑edge engineering with artistic craft to push personal
+            audio technology beyond today’s limits.
+          </p>
+        </div>
+  
+        <div class="mission-card">
+          <h3>User Centric</h3>
+          <p>
+            Every feature starts with real‑world feedback. Products adapt to
+            people —not the other way around.
+          </p>
+        </div>
+  
+        <div class="mission-card">
+          <h3>Sustainable Growth</h3>
+          <p>
+            We build long‑lasting hardware and recyclable components to reduce
+            waste and protect our planet’s soundtrack.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    
+    
+      <footer class="nc-footer">
+        <div class="footer-container">
+      
+          <!--LINK GRID -->
+          <div class="footer-grid">
+            <div class="footer-col">
+              <h4>Products</h4>
+              <ul>
+                <li><a href="underDevelopment.html">Headphones</a></li>
+                <li><a href="underDevelopment.html">Earbuds</a></li>
+                <li><a href="underDevelopment.html">Speakers</a></li>
+                <li><a href="underDevelopment.html">Accessories</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-col">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about-us.html">About&nbsp;Us</a></li> <!-- &nbsp; = non-breaking space, adds fixed space and prevents line break -->
+                <li><a href="underDevelopment.html">Careers</a></li>
+                <li><a href="underDevelopment.html">Press</a></li>
+                <li><a href="underDevelopment.html">Blog</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-col">
+              <h4>Support</h4>
+              <ul>
+                <li><a href="underDevelopment.html">Help Center</a></li>
+                <li><a href="underDevelopment.html">Warranty</a></li>
+                <li><a href="underDevelopment.html">Shipping</a></li>
+                <li><a href="underDevelopment.html">Returns</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-col">
+              <h4>Member</h4>
+              <ul>
+                <li><a href="JoinMembership.html">Join Membership</a></li>
+                <li><a href="underDevelopment.html">Rewards</a></li>
+                <li><a href="underDevelopment.html">Refer a Friend</a></li>
+                <li><a href="underDevelopment.html">VIP Events</a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- ===== SOCIAL ===== -->
+          <div class="footer-social">
+            <a href="underDevelopment.html"><img src="./ASSET/instagram.png" alt="Instagram" /></a>
+            <a href="underDevelopment.html"><img src="./ASSET/whatsapp.png"  alt="WhatsApp"  /></a>
+          </div>
+      
+          <hr />
+      
+          <!--BOTTOM BAR-->
+          <div class="footer-bottom">
+            <span>© 2025 Noisecore Corporation</span>
+            <nav class="bottom-links">
+              <a href="underDevelopment.html">Sitemap</a>
+              <a href="underDevelopment.html">Legal</a>
+              <a href="underDevelopment.html">Privacy Policy</a>
+            </nav>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
