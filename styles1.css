@@ -3,24 +3,19 @@
     --nc-yellow: #ffd700;
     --nc-black: #000000;
     --nc-white: #ffffff;
-
     --nc-text-dark: #212121;
     --nc-text-light: #EAEAEA;
     --nc-text-muted-dark: #555555;
     --nc-text-muted-light: #999999;
-
     --nc-bg-light: #f6f8fa;
     --nc-bg-medium: #eeeeee;
     --nc-bg-dark: #121212;
     --nc-bg-dark-contrast: #1F1F1F;
-
     --nc-border-light: #dcdcdc;
     --nc-border-dark: #3a3a3a;
-
     --shadow-sm: 0 4px 8px rgba(0,0,0,0.05);
     --shadow-md: 0 8px 16px rgba(0,0,0,0.07);
     --shadow-lg: 0 15px 30px rgba(0,0,0,0.1);
-
     --max-width: 1200px;
     --section-padding-y: 4rem;
 }
@@ -70,7 +65,7 @@ main {
     border-bottom: 1px solid var(--nc-border-dark);
 }
 
-.nav-left { /* This class is used as nav-menu nav-left */
+.nav-left {
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -152,7 +147,9 @@ main {
     text-decoration: none;
 }
 
-.nav-toggle { display: none; } /* This class is on the input checkbox */
+.nav-toggle { 
+    display: none; 
+}
 
 .nav-burger {
     display: none;
@@ -408,16 +405,15 @@ main {
 .highlight-main-caption {
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     color: var(--nc-text-light);
-    margin-bottom: 2.5rem; /* Jarak dari judul ke kartu penawaran */
+    margin-bottom: 2.5rem; 
     font-weight: 700;
-    /* Anda bisa menambahkan animasi di sini jika mau */
 }
 
 .deal-cards-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-bottom: 3rem; /* Jarak dari kartu penawaran ke tombol "View All" */
+    margin-bottom: 3rem; 
 }
 
 .single-deal-entry {
@@ -496,8 +492,7 @@ main {
 }
 
 .cta-view-all-deals {
-    display: inline-block; /* Diubah dari block agar text-align:center pada parent bisa bekerja */
-    /* width: max-content; /* Tidak perlu jika inline-block dan parent text-align: center */
+    display: inline-block; 
     padding: .9rem 2.5rem;
     border-radius: 30px;
     font-family: 'Inknut Antiqua', sans-serif;
@@ -517,28 +512,6 @@ main {
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(255,64,64,.2);
     text-decoration: none;
-}
-
-/* Media Queries untuk Responsivitas */
-@media (max-width: 768px) {
-    .highlight-main-caption {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-        margin-bottom: 2rem;
-    }
-
-    .deal-cards-layout {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kartu mungkin jadi 1 kolom */
-        gap: 1.5rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .deal-headline-text {
-        font-size: 1.2rem;
-    }
-
-    .deal-summary-paragraph {
-        font-size: 0.9rem;
-    }
 }
 
 @keyframes marqueeScrollLeft {
@@ -626,7 +599,7 @@ main {
 }
 .visual-breaker-section {
     width: 100%;
-    height: 300px; /* Tinggi bisa disesuaikan */
+    height: 300px; 
     margin: 3.5rem 0;
     display: flex;
     align-items: center;
@@ -768,6 +741,52 @@ main {
 }
 
 @media (max-width: 768px) {
+    .navbar { 
+        padding: .75rem 1rem; 
+    }
+    .logo { 
+        font-size: 1.5rem; 
+    }
+    .search-input { 
+        display: none; 
+    }
+    .nav-left {
+        position: fixed; 
+        top: 0; 
+        right: -100%;
+        width: min(75%, 300px); 
+        height: 100vh;
+        background: var(--nc-bg-dark-contrast);
+        flex-direction: column; 
+        align-items: flex-start;
+        gap: 1rem; 
+        padding: 6rem 2rem 2rem;
+        transition: right .35s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+    #nav-toggle:checked ~ .nav-left { 
+        right: 0; 
+    }
+    .nav-left a { 
+        font-size: 1.1rem; 
+        padding-bottom: .5rem; 
+        width: 100%; 
+        color: var(--nc-text-light);
+    }
+    .nav-left a.active { 
+        color: var(--nc-bg-medium); 
+    }
+    .underline { 
+        display: none; 
+    }
+    .nav-burger { 
+        display: flex; 
+    }
+
+    .feature-prime-heading {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
+    }
     .merchandise-grid-array {
         gap: 1.5rem;
     }
@@ -776,76 +795,181 @@ main {
         max-width: calc(50% - 0.75rem);
         min-width: 0;
     }
-    .feature-prime-heading {
-        font-size: clamp(1.8rem, 5vw, 2.2rem);
+
+    .highlight-main-caption {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        margin-bottom: 2rem;
+    }
+    .deal-cards-layout {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .deal-headline-text {
+        font-size: 1.2rem;
+    }
+    .deal-summary-paragraph {
+        font-size: 0.9rem;
+    }
+    
+    .scrolling-bridge-title {
+        font-size: clamp(1.6rem, 4vw, 2rem);
+    }
+    .bridge-phrase-item {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .emphasis-statement-heading,
+    .cta-bridge-headline {
+        font-size: clamp(1.8rem, 4.5vw, 2.5rem);
+    }
+    .emphasis-statement-text,
+    .cta-bridge-subtext {
+        font-size: 1rem;
+    }
+
+    .visual-breaker-section {
+        height: 200px;
+        margin: 2.5rem 0;
+    }
+
+    .footer-grid { 
+        grid-template-columns: 1fr; 
+        text-align: left; 
+    }
+    .footer-social { 
+        justify-content: flex-start; 
+    }
+    .footer-bottom { 
+        flex-direction: column; 
+        gap: 1rem; 
+        align-items: flex-start; 
+    }
+    .bottom-links { 
+        flex-direction: column; 
+        gap: .5rem; 
+        align-items: flex-start;
     }
 }
 
 @media (max-width: 480px) {
+    :root { 
+        --section-padding-y: 3rem; 
+    }
+
+    .navbar { 
+        padding: .5rem 1rem; 
+    }
+    .logo { 
+        font-size: 1.3rem; 
+    }
+    .nav-left { 
+        padding-top: 5rem; 
+    }
+    .nav-left a { 
+        font-size: 1rem; 
+    }
+
+    .hero-title { 
+        font-size: clamp(1.8rem, 7vw, 2.5rem); 
+    }
+    .hero-cta { 
+        padding: .7rem 1.8rem; 
+        font-size: .9rem; 
+    }
+
+    .feature-prime-heading {
+        font-size: clamp(1.6rem, 5vw, 2rem); 
+        margin-bottom: 2.5rem;
+    }
     .merchandise-grid-array {
-        gap: 1rem;
+        gap: 1rem; 
     }
     .single-item-capsule {
-        flex-basis: 100%;
-        max-width: 320px;
+        flex-basis: 100%; 
+        max-width: 320px; 
         margin-left: auto;
         margin-right: auto;
     }
-    .feature-prime-heading {
-        font-size: clamp(1.6rem, 5vw, 2rem);
-        margin-bottom: 2.5rem;
-    }
     .item-official-name {
-        font-size: 0.95rem;
+        font-size: 0.9rem; 
     }
     .item-current-price-label {
-        font-size: 1rem;
+        font-size: 1rem; 
     }
     .capsule-visual-display {
-        height: 180px;
+        height: 180px; 
     }
-}
 
-@media (max-width: 1024px) {
-    .navbar { padding: .75rem 1.5rem; }
-    .nav-left { gap: 1.5rem; }
-}
-
-@media (max-width: 768px) {
-    .navbar { padding: .75rem 1rem; }
-    .logo { font-size: 1.5rem; }
-    .search-input { display: none; }
-    .nav-left {
-        position: fixed; top: 0; right: -100%;
-        width: min(75%, 300px); height: 100vh;
-        background: var(--nc-bg-dark-contrast);
-        flex-direction: column; align-items: flex-start;
-        gap: 1rem; padding: 6rem 2rem 2rem;
-        transition: right .35s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-        z-index: 999;
+    .highlight-main-caption {
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+        margin-bottom: 1.5rem;
     }
-    #nav-toggle:checked ~ .nav-left { right: 0; }
-    .nav-left a { font-size: 1.1rem; padding-bottom: .5rem; width: 100%; color: var(--nc-text-light);}
-    .nav-left a.active { color: var(--nc-red); }
-    .underline { display: none; }
-    .nav-burger { display: flex; }
+    .deal-cards-layout {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .deal-headline-text {
+        font-size: 1.1rem;
+    }
+    .deal-summary-paragraph {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    .btn-get-deal {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .scrolling-bridge-title {
+        font-size: clamp(1.4rem, 4vw, 1.8rem); 
+        margin-bottom: 1.5rem;
+    }
+    .bridge-phrase-item {
+        padding: 0.6rem 1rem; 
+        font-size: 0.8rem; 
+        margin-right: 0.8rem;
+    }
+    .two-row-scrolling-bridge {
+        padding: 1.5rem 0;
+        margin: 2rem 0;
+    }
 
-    .footer-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left; }
-    .footer-social { justify-content: flex-start; }
-    .footer-bottom { flex-direction: column; gap: 1rem; align-items: flex-start; }
-    .bottom-links { flex-direction: column; gap: .5rem; align-items: flex-start;}
-}
+    .emphasis-statement-heading,
+    .cta-bridge-headline {
+        font-size: clamp(1.6rem, 4.5vw, 2.2rem); 
+        margin-bottom: 1rem;
+    }
+    .emphasis-statement-text,
+    .cta-bridge-subtext {
+        font-size: 0.95rem; 
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    .dark-emphasis-panel,
+    .membership-cta-bridge {
+        padding: 3rem 1rem; 
+        margin: 2.5rem 0;
+    }
+    .btn-cta-bridge-join {
+        padding: .8rem 2.2rem;
+        font-size: 0.9rem;
+    }
 
-@media (max-width: 480px) {
-    :root { --section-padding-y: 3rem; }
-    .navbar { padding: .5rem 1rem; }
-    .logo { font-size: 1.3rem; }
-    .nav-left { padding-top: 5rem; }
-    .nav-left a { font-size: 1rem; }
-    .hero-title { font-size: clamp(1.8rem, 7vw, 2.5rem); }
-    .hero-cta { padding: .7rem 1.8rem; font-size: .9rem; }
-    .footer-col h4 { font-size: 1rem; margin-bottom: .8rem; }
-    .footer-col ul { gap: .4rem; }
-    .footer-bottom span, .footer-bottom a { font-size: .8rem; }
+    .visual-breaker-section {
+        height: 150px; 
+        margin: 2rem 0;
+    }
+
+    .footer-col h4 { 
+        font-size: 1rem; 
+        margin-bottom: .8rem; 
+    }
+    .footer-col ul { 
+        gap: .4rem; 
+    }
+    .footer-bottom span, .footer-bottom a { 
+        font-size: .8rem; 
+    }
 }
