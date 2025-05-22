@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
           ok = false;
         }
       };
-  
-      /* -------- validation rules (tanpa regex) -------- */
       const firstName = $('#firstName');
 mark(firstName, '#msg-fname', firstName.value.trim() !== '', 'Required');
 
@@ -100,4 +98,6 @@ mark(surname, '#msg-lname', surname.value.trim() !== '', 'Required');
     alert("Logged out.");
     window.location.reload();
   }
+  
+
   

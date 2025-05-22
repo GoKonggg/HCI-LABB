@@ -57,7 +57,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--nc-bg-dark-contrast);
+      background: linear-gradient(135deg, 
+                                var(--nc-bg-dark) 0%, 
+                                var(--nc-bg-dark-contrast) 30%, 
+                                var(--nc-black) 50%, 
+                                var(--nc-bg-dark-contrast) 70%, 
+                                var(--nc-bg-dark) 100%);
     padding: .75rem 2rem;
     position: sticky;
     top: 0;

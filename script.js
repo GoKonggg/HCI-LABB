@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinksForUnderline = document.querySelectorAll('.nav-left a');
     const navContainerForUnderline = document.querySelector('.nav-left');
 
+    console.log('navUnderlineElement:', navUnderlineElement);
+    console.log('navLinksForUnderline:', navLinksForUnderline);
+    console.log('navContainerForUnderline:', navContainerForUnderline);
+    console.log('Current Path Filename:', window.location.pathname.split('/').pop() || 'index2.html');
+    console.log('Last active from sessionStorage:', sessionStorage.getItem('lastActiveNcHref'));
+
     function moveUnderline(link) {
         if (navUnderlineElement && navContainerForUnderline && link) {
             const linkRect = link.getBoundingClientRect();
@@ -27,6 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (navLinksForUnderline.length > 0 && navContainerForUnderline && navUnderlineElement) {
         navLinksForUnderline.forEach(link => {
             link.addEventListener('mouseenter', () => {
+                console.log('Mouse enter on:', link.textContent, 'Is active?', link.classList.contains('active'));
+    console.log('Container flex direction:', window.getComputedStyle(navContainerForUnderline).flexDirection);
+    
                 if (!link.classList.contains('active') && window.getComputedStyle(navContainerForUnderline).flexDirection !== 'column') {
                     const linkRect = link.getBoundingClientRect();
                     const containerRect = navContainerForUnderline.getBoundingClientRect();
