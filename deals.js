@@ -6,10 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let signedIn = !!localStorage.getItem(STORAGE_TOKEN);
 
-  // Tampilkan section setelah DOM siap, tapi sebelum decision
+
   section.classList.add('show');
 
-  // Jika sudah sign-in → hilangkan lock + overlay
   if (signedIn) {
     section.classList.remove('locked');
     const overlay = section.querySelector('.overlay');

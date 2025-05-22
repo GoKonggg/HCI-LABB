@@ -7,53 +7,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="deals.css" />
+  <link rel="stylesheet" href="styles1.css" />
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header class="navbar">
-  <!-- checkbox “on/off” -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <header class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger">
+            <span></span><span></span><span></span>
+        </label>
 
-  <!-- tiga garis -->
-  <label for="nav-toggle" class="nav-burger">
-    <span></span><span></span><span></span>
-  </label>
+        <nav class="nav-menu nav-left">
+            <div class="underline"></div>
+            <a href="index2.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about-us.html">ABOUT US</a>
+        </nav>
 
-  <!-- KIRI: menu link, dibungkus .nav-menu -->
-  <nav class="nav-menu nav-left">
-    <a href="index2.html">HOME</a>
-    <a href="shop.html">SHOP</a>
-    <a href="about-us.html">ABOUT US</a>
-  </nav>
+        <div class="logo">
+            <a href="index2.html">NOISECORE</a>
+        </div>
 
-  <!-- TENGAH: logo -->
-  <div class="logo">
-    <a href="index2.html">NOISECORE</a>
-  </div>
+        <div class="nav-right" id="navRight">
+            <form class="search-form" onsubmit="handleSearch(event)">
+                <input type="text" id="searchQuery" class="search-input" placeholder="Search..." />
+                <button type="submit" style="display: none" aria-label="Submit Search"></button>
+            </form>
+            <a href="account.html" class="icon-link" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+            <a href="wishlist.html" class="icon-link" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
+            <a href="cart.html" class="icon-link" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </header>
 
-  <!-- KANAN: search + icon -->
-  <div class="nav-right">
-    <form class="search-form" onsubmit="handleSearch(event)">
-      <input
-        type="text"
-        id="searchQuery"
-        class="search-input"
-        placeholder="Search..."
-      />
-      <button type="submit" style="display: none"></button>
-    </form>
-    <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
-    <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
-    <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
-  </div>
-</header>
+    
 
   <!-- HERO SECTION -->
   <header class="deal-hero">
     <h1>Join & Save More</h1>
     <p>Become a Noisecore Member today and automatically unlock exclusive discounts listed below.</p>
-    <a href="JoinMembership.html" class="hero-btn" >Join Membership</a>
+    <a href="joinMembership.html" class="hero-btn" >Join Membership</a>
   </header>
 
   <!-- DEALS SECTION -->
@@ -69,26 +61,26 @@
     </div>  
 
     <div class="deals-grid">
-      <!-- Contoh card deals -->
+     
       <div class="deal-card" data-category="bundle">
-        <img src="./ASSET/deal-bundle.png" alt="Bundle Save" />
-        <h3>Bundle & Save – 15% OFF</h3>
+        
+        <h3>Bundle & Save - 15% OFF</h3>
         <p>Buy any headphone + speaker combo and get 15% discount automatically applied at checkout.</p>
       </div>
       <div class="deal-card" data-category="member">
-        <img src="./ASSET/deal-member.png" alt="Member Discount" />
-        <h3>Member Discount – 10% OFF</h3>
-        <p>Signed‑in members enjoy an extra 10% off all earbuds collections.</p>
+        
+        <h3>Member Discount - 10% OFF</h3>
+        <p>Signed-in members enjoy an extra 10% off all earbuds collections.</p>
       </div>
       <div class="deal-card" data-category="launch">
-        <img src="./ASSET/deal-headx.png" alt="Launch Promo" />
-        <h3>Head‑X Pro Launch – 18% OFF</h3>
-        <p>Pre‑order Head‑X Pro now and save 18% plus free gifts.</p>
+        
+        <h3>Head-X Pro Launch - 18% OFF</h3>
+        <p>Pre-order Head-X Pro now and save 18% plus free gifts.</p>
       </div>
       <div class="deal-card" data-category="shipping">
-        <img src="./ASSET/deal-free.png" alt="Free Shipping" />
+        
         <h3>Free Shipping</h3>
-        <p>Free worldwide shipping on orders above IDR 1,000,000.</p>
+        <p>Free worldwide shipping on orders above IDR 1,000,000.</p>
       </div>
     </div>
 
@@ -98,67 +90,64 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="nc-footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li><a href="#">Headphones</a></li>
-            <li><a href="#">Earbuds</a></li>
-            <li><a href="#">Speakers</a></li>
-            <li><a href="#">Accessories</a></li>
-          </ul>
+  
+    <footer class="nc-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="underDevelopment.html">Headphones</a></li>
+                        <li><a href="underDevelopment.html">Earbuds</a></li>
+                        <li><a href="underDevelopment.html">Speakers</a></li>
+                        <li><a href="underDevelopment.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about-us.html">About&nbsp;Us</a></li>
+                        <li><a href="underDevelopment.html">Careers</a></li>
+                        <li><a href="underDevelopment.html">Press</a></li>
+                        <li><a href="underDevelopment.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="underDevelopment.html">Help Center</a></li>
+                        <li><a href="underDevelopment.html">Warranty</a></li>
+                        <li><a href="underDevelopment.html">Shipping</a></li>
+                        <li><a href="underDevelopment.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Member</h4>
+                    <ul>
+                        <li><a href="JoinMembership.html">Join Membership</a></li>
+                        <li><a href="underDevelopment.html">Rewards</a></li>
+                        <li><a href="underDevelopment.html">Refer a Friend</a></li>
+                        <li><a href="underDevelopment.html">VIP Events</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="underDevelopment.html" aria-label="Instagram"><img src="./ASSET/instagram.png" alt="Instagram" /></a>
+                <a href="underDevelopment.html" aria-label="WhatsApp"><img src="./ASSET/whatsapp.png" alt="WhatsApp" /></a>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+                <span>© 2025 Noisecore Corporation</span>
+                <nav class="bottom-links">
+                    <a href="underDevelopment.html">Sitemap</a>
+                    <a href="underDevelopment.html">Legal</a>
+                    <a href="underDevelopment.html">Privacy Policy</a>
+                </nav>
+            </div>
         </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Press</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Warranty</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Member</h4>
-          <ul>
-            <li><a href="#">Join Program</a></li>
-            <li><a href="#">Rewards</a></li>
-            <li><a href="#">Refer a Friend</a></li>
-            <li><a href="#">VIP Events</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-social">
-        <a href="#"><img src="./ASSET/instagram.png" alt="Instagram" /></a>
-        <a href="#"><img src="./ASSET/whatsapp.png" alt="WhatsApp" /></a>
-      </div>
-
-      <hr />
-
-      <div class="footer-bottom">
-        <span>© 2025 Noisecore Corporation</span>
-        <nav class="bottom-links">
-          <a href="#">Sitemap</a>
-          <a href="#">Legal</a>
-          <a href="#">Privacy Policy</a>
-        </nav>
-      </div>
-    </div>
-
-  </footer>
+    </footer>
  
   <script src="deals.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

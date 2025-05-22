@@ -5,32 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Account Dashboard | Noisecore</title>
   <link rel="stylesheet" href="account.css" />
+  <link rel="stylesheet" href="styles1.css" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <div class="navbar">
-    <div class="nav-left">
-      <a href="index2.html">HOME</a>
-      <a href="shop.html">SHOP</a>
-      <a href="about-us.html">ABOUT US</a>
-    </div>
-    <div class="logo">
-      <a href = "index2.html">NOISECORE</a>
-    </div>
-    <div class="nav-right">
-      <form class="search-form" onsubmit="handleSearch(event)">
-        <input type="text" id="searchQuery" class="search-input" placeholder="Search..." />
-        <button type="submit" style="display:none;"></button>
-      </form>
-      <a href="account.html" class="icon-link"><i class="fa-regular fa-user"></i></a>
-      <a href="wishlist.html" class="icon-link"><i class="fa-regular fa-heart"></i></a>
-      <a href="cart.html" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
-    </div>
-  </div>
+  
+    <header class="navbar">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-burger">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="nav-menu nav-left">
+            <div class="underline"></div>
+            <a href="index2.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="about-us.html">ABOUT US</a>
+        </nav>
+
+        <div class="logo">
+            <a href="index2.html">NOISECORE</a>
+        </div>
+
+        <div class="nav-right" id="navRight">
+            <form class="search-form" onsubmit="handleSearch(event)">
+                <input type="text" id="searchQuery" class="search-input" placeholder="Search..." />
+                <button type="submit" style="display: none" aria-label="Submit Search"></button>
+            </form>
+            <a href="account.html" class="icon-link" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+            <a href="wishlist.html" class="icon-link" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
+            <a href="cart.html" class="icon-link" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </header>
+
 
   <!-- ACCOUNT DASHBOARD -->
   <div class="dashboard">
